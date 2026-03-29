@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #e5ddd5;
+  background: #0b141a;
 }
 
 /* FULLSCREEN */
@@ -36,13 +36,14 @@ body {
 
 /* USER (kanan) */
 .user {
-  background: #dcf8c6;
+  background: #005c4b;
   margin-left: auto;
   border-bottom-right-radius: 4px;
 }
 
 /* BOT (kiri) */
 .bot {
+  background: #202c33;
   background: white;
   border-bottom-left-radius: 4px;
 }
