@@ -4,23 +4,28 @@ async function sendMessage() {
 
   const userText = input.value;
   if (!userText) return;
-  let found = null;
 
-for (let key in knowledge) {
-  if (userText.toLowerCase().includes(key)) {
-    found = knowledge[key];
-    break;
-  }
-}
-
-if (found) {
-  chatBox.innerHTML += `<div class="message bot">${found}</div>`;
-  return;
-}
-
+  // ✅ tampilkan user dulu
   chatBox.innerHTML += `<div class="message user">${userText}</div>`;
   input.value = "";
 
+  // ✅ baru cek knowledge
+  let found = null;
+
+  for (let key in knowledge) {
+    if (userText.toLowerCase().includes(key)) {
+      found = knowledge[key];
+      break;
+    }
+  }
+
+  // ✅ kalau ketemu → stop di sini
+  if (found) {
+    chatBox.innerHTML += `<div class="message bot">${found}</div>`;
+    return;
+  }
+
+  // 🤖 kalau ga ketemu → lanjut ke AI
   const response = await fetch(
     "https://huggingface.co/spaces/komanglegolas/chatbot-hr/run",
     {
