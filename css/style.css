@@ -5,10 +5,11 @@ body {
 
 .chat-container {
   width: 400px;
-  margin: 50px auto;
+  margin: 40px auto;
   background: white;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 #chat-box {
@@ -18,28 +19,8 @@ body {
 }
 
 .message {
-  margin: 5px 0;
-}
-
-.user {
-  text-align: right;
-}
-
-.bot {
-  text-align: left;
-  color: blue;
-}
-.chat-container {
-  width: 400px;
-  margin: 40px auto;
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-}
-
-.message {
-  padding: 8px 12px;
-  margin: 5px 0;
+  padding: 10px;
+  margin: 6px 0;
   border-radius: 8px;
   max-width: 70%;
 }
@@ -47,8 +28,23 @@ body {
 .user {
   background: #d1e7ff;
   margin-left: auto;
+  text-align: right;
 }
 
 .bot {
   background: #eee;
+}
+
+.input-area {
+  display: flex;
+  gap: 5px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+}
+
+button {
+  padding: 8px 12px;
 }
